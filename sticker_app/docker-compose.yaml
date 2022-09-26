@@ -1,0 +1,39 @@
+version: "3.3"
+
+services:
+       api-server: 
+         build: ./back
+         container_name: server-sticker
+         ports: 
+           - 8888:8888
+         env_file: ./deployment/loc.env
+         volumes: 
+           - ./back:/app
+         links:
+           - postgres
+         depends_on:
+           - postgres
+       db:
+           container_name: db_postgres
+           image: postgres:12-alpine
+           restart: always
+           env_file: ./deployment/loc.env
+          #  environment: 
+          #    POSTGRES_USER: root
+          #    POSTGRES_PASSWORD: root
+          #    POSTGRES_DB: test_db
+           ports:
+              - "5432:5432"
+       pgadmin:
+             container_name: pgAdmin
+             image: dpage/pgadmin4:4.22
+             restart: always
+             depends_on:
+               - db
+             environment: 
+              PGADMIN_DEFAULT_EMAIL: developer@mail.ru
+              PGADMIN_DEFAULT_PASSWORD: developer
+             ports:
+                - "16555:80"
+             loading: 
+               driver: none
