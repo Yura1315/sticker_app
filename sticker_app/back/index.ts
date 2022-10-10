@@ -2,6 +2,7 @@ import * as Hapi from '@hapi/hapi';
 import * as Inert from '@hapi/inert';
 import * as Vision from '@hapi/vision';
 import * as HapiSwagger from 'hapi-swagger';
+import dataSource from './ormconfig';
 import routes from './routes';
 
 (async () => {
@@ -10,13 +11,13 @@ import routes from './routes';
       port: 8888,
       routes: {
         cors: {
-          origin: ['*'],
+          origin: [ '*' ],
         },
       },
     });
 
     // add plugins
-    await server.register([Inert, Vision]);
+    await server.register([ Inert, Vision ]);
     await server.register({
       plugin: HapiSwagger,
       options: {
@@ -26,7 +27,7 @@ import routes from './routes';
         },
         jsonPath: '/documentation.json',
         documentationPath: '/documentation',
-        schemes: ['http', 'https'],
+        schemes: [ 'http', 'https' ],
         debug: true,
         securityDefinitions: {
           Bearer: {
@@ -57,7 +58,9 @@ import routes from './routes';
     );
 
     // data sourse
-  } catch(error) {
+    await dataSource.initialize();
+    await dataSource.runMigrations();
+  } catch (error) {
     console.log(error);
   }
 })();
