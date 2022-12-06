@@ -1,0 +1,23 @@
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    'header'
+    'content'
+    'footer';
+  grid-template-rows: 72px 1fr 120px;
+}
+
+.content {
+  grid-area: content;
+  width: 1200px;
+  margin: 0 auto;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+// @media (max-width: 1400px) {
+//   .content {
+//     width: 100%;
+//   }
+// }
