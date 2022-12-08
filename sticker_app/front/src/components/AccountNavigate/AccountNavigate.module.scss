@@ -103,3 +103,101 @@
     font-size: 14px;
   }
 }
+
+.mobile_user_info {
+  display: none;
+  align-items: center;
+  position: relative;
+  margin-left: 18px;
+  height: 100%;
+  cursor: pointer;
+}
+
+// =================burger_menu================
+
+.hamburger_lines {
+  display: block;
+  height: 20px;
+  width: 27px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+
+.line {
+  display: block;
+  height: 2px;
+  width: 100%;
+  border-radius: 10px;
+  background: #2a2f37;
+  opacity: 0.4;
+}
+
+// ===============burger_menu start===============
+
+.line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+// =================burger_menu animate==============
+
+.open_line1 {
+  transform: rotate(45deg);
+}
+
+.open_line2 {
+  transform: scaleY(0);
+}
+
+.open_line3 {
+  transform: rotate(-45deg);
+}
+
+// ==========================================
+
+.lock_active {
+  display: none;
+  color: #2a2f37;
+  opacity: 0.4;
+  transition: ease-in-out 0.4s;
+  &:hover ~ .hover_menu {
+    display: block;
+  }
+  &:hover {
+    color: $blue-color;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 894px) {
+  .user_info_svg,
+  .user_info_text {
+    display: none;
+  }
+
+  .user_info_wrap {
+    display: none;
+  }
+
+  .lock_active {
+    display: block;
+  }
+  .burger_menu {
+    display: block;
+  }
+  .mobile_user_info {
+    display: flex;
+  }
+}

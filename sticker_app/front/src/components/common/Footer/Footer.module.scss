@@ -31,3 +31,16 @@
 .logo {
   display: inline-block;
 }
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    padding-right: 24px;
+    padding-left: 24px;
+    &_wrap {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 894px) {
+}

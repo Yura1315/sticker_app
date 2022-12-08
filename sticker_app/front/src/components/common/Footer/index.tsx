@@ -3,7 +3,7 @@ import style from './Footer.module.scss';
 import logo from '../../../assets/img/logo.svg';
 
 const Footer = () => (
-  <div className={style.footer}>
+  <footer className={style.footer}>
     <div className={style.footer_wrap}>
       <div className={style.footer_left}>
         <img className={style.logo} src={logo} alt="logo" />
@@ -11,7 +11,7 @@ const Footer = () => (
       </div>
       <p className={style.footer_text_low}>© ООО «Доска диджитал», 2022</p>
     </div>
-  </div>
+  </footer>
 );
 
 export default Footer;
