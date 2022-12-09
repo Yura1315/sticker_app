@@ -1,24 +1,27 @@
-import { Input, Space } from 'antd';
 import React from 'react';
-// import { Input, Space } from 'antd';
-import 'antd/dist/reset.css';
+import { Col, Input, Space } from 'antd';
+import style from './FormSearch.module.scss';
 
 const FormSearch: React.FC = () => {
   const { Search } = Input;
   const onSearch = (value: string) => console.log(value);
   return (
-    <Space direction="horizontal">
+    <Col style={{ maxWidth: '565px', flexGrow: 1 }}>
       <Search
+        className={style.search_mobile}
         placeholder="search"
         allowClear
-        enterButton="Искать"
+        // enterButton="Искать"
+        enterButton
         onSearch={onSearch}
+        // size="small"
+        // loading={true}
         style={{
-          // width: '565px',
           borderRadius: '4px',
+          width: '100%',
         }}
       />
-    </Space>
+    </Col>
   );
 };
 

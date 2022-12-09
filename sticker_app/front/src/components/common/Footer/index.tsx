@@ -9,7 +9,7 @@ const Footer = () => (
         <img className={style.logo} src={logo} alt="logo" />
         <span className={style.footer_text}>Доска объявлений</span>
       </div>
-      <p className={style.footer_text_low}>© ООО «Доска диджитал», 2022</p>
+      <span className={style.footer_text_low}>© ООО «Доска диджитал», 2022</span>
     </div>
   </footer>
 );

@@ -1,0 +1,13 @@
+@import '../../../assets/styles/vars.scss';
+
+@media screen and (max-width: 480px) {
+  .search_mobile {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .search_mobile {
+    display: none;
+  }
+}

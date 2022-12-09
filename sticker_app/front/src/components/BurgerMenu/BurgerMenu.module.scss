@@ -45,3 +45,9 @@
 .open_line3 {
   transform: rotate(-45deg);
 }
+
+@media screen and (max-width: 480px) {
+  .hamburger_lines {
+    margin-left: 19px;
+  }
+}

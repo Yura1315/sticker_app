@@ -6,16 +6,23 @@ import style from './AccountNavigate.module.scss';
 
 type AccountNavigatePropsType = {
   handler: () => void;
+  handlerAccount: () => void;
   activeBurger: boolean;
+  visibleAccount: boolean;
 };
 
-const AccountNavigate = ({ handler, activeBurger }: AccountNavigatePropsType) => {
+const AccountNavigate = ({
+  handler,
+  activeBurger,
+  handlerAccount,
+  visibleAccount,
+}: AccountNavigatePropsType) => {
   return (
     <>
       <div className={style.mobile_user_info}>
-        <LockOutlined className={style.lock_active} />
+        <LockOutlined className={style.lock_active} onClick={handlerAccount} />
         <BurgerMenu setActiveBurger={handler} activeBurger={activeBurger} />
-        <HoverMenu />
+        <HoverMenu visibleAccount={visibleAccount} />
       </div>
       <div className={style.user_info_wrap}>
         <svg

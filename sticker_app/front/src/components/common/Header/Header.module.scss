@@ -71,3 +71,19 @@
     }
   }
 }
+
+@media screen and (max-width: 694px) {
+  .header {
+    &_logo {
+      margin-right: 29px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    &_logo {
+      margin-right: 19px;
+    }
+  }
+}

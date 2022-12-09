@@ -8,6 +8,15 @@ import MobileMenu from '../../MobileMenu';
 
 const Header = () => {
   const [activeBurger, setActiveBurger] = useState(false);
+  const [visibleAccount, setVisibleAccount] = useState(false);
+  const handlerAccount = () => {
+    setVisibleAccount(!visibleAccount);
+  };
+  const resetAccount = () => {
+    if (visibleAccount) {
+      setVisibleAccount(false);
+    }
+  };
   const resetBurger = () => {
     if (activeBurger) {
       setActiveBurger(false);
@@ -26,7 +35,12 @@ const Header = () => {
         <Link className={style.header_link} to="/dashboard-add">
           Подать объявление
         </Link>
-        <AccountNavigate handler={handlerBurger} activeBurger={activeBurger} />
+        <AccountNavigate
+          handler={handlerBurger}
+          activeBurger={activeBurger}
+          handlerAccount={handlerAccount}
+          visibleAccount={visibleAccount}
+        />
         <MobileMenu activeBurger={activeBurger} />
         <p className={style.toggle}>toggle</p>
       </div>

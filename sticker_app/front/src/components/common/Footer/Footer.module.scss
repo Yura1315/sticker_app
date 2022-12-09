@@ -24,6 +24,7 @@
       font-size: 12px;
       color: $dark-grey;
       margin-bottom: 0;
+      margin-top: 12px;
     }
   }
 }
@@ -42,5 +43,18 @@
   }
 }
 
-@media screen and (max-width: 894px) {
+@media screen and (max-width: 498px) {
+  .footer {
+    &_text {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 498px) {
+  .footer {
+    &_wrap {
+      flex-direction: column;
+    }
+  }
 }
