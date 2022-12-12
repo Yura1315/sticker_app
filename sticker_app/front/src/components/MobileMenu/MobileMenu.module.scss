@@ -7,8 +7,6 @@
   justify-content: center;
   margin-left: 24px;
   width: 180px;
-  // padding-right: 26px;
-  // padding-left: 26px;
   font-size: 14px;
   background-color: $yellow-color;
   border-radius: 4px;
@@ -56,5 +54,11 @@
   }
   &_link:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 563px) {
+  .category_menu {
+    top: 56px;
   }
 }

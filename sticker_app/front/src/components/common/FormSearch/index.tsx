@@ -6,7 +6,7 @@ const FormSearch: React.FC = () => {
   const { Search } = Input;
   const onSearch = (value: string) => console.log(value);
   return (
-    <Col style={{ maxWidth: '565px', flexGrow: 1 }}>
+    <Col className={style.form_wrap} style={{ maxWidth: '565px', flexGrow: 1 }}>
       <Search
         className={style.search_mobile}
         placeholder="search"

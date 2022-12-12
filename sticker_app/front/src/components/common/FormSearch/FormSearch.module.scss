@@ -1,13 +1,22 @@
 @import '../../../assets/styles/vars.scss';
 
+form {
+  &_wrap {
+    max-width: 565px;
+    flex-grow: 1;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .search_mobile {
     width: 100%;
   }
 }
 
-@media screen and (max-width: 412px) {
-  .search_mobile {
-    display: none;
+@media screen and (max-width: 563px) {
+  .form {
+    &_wrap {
+      display: none;
+    }
   }
 }

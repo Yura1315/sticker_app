@@ -21,9 +21,10 @@ const AccountNavigate = ({
     <>
       <div className={style.mobile_user_info}>
         <LockOutlined className={style.lock_active} onClick={handlerAccount} />
-        <BurgerMenu setActiveBurger={handler} activeBurger={activeBurger} />
+        {/* <BurgerMenu setActiveBurger={handler} activeBurger={activeBurger} /> */}
         <HoverMenu visibleAccount={visibleAccount} />
       </div>
+      <BurgerMenu setActiveBurger={handler} activeBurger={activeBurger} />
       <div className={style.user_info_wrap}>
         <svg
           className={style.user_info_svg}

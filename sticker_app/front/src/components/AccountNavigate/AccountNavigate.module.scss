@@ -73,6 +73,7 @@
       background-color: rgb(247, 247, 247);
     }
     &_item {
+      min-width: 115px;
       font-size: 14px;
       color: $dark-grey;
       margin-left: 16px;
@@ -178,7 +179,7 @@
 
 @media screen and (max-width: 864px) {
   .mobile_user_info {
-    margin-left: 92px;
+    margin-left: 70px;
   }
 }
 
@@ -188,8 +189,16 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 563px) {
   .mobile_user_info {
-    margin-left: 19px;
+    margin-left: 0;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    justify-self: end;
+  }
+  .hover_menu {
+    top: 56px;
   }
 }
