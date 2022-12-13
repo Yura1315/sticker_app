@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Input, Space } from 'antd';
+import { Col, Input } from 'antd';
 import style from './FormSearch.module.scss';
 
 const FormSearch: React.FC = () => {

@@ -6,10 +6,16 @@ import style from './Header.module.scss';
 import AccountNavigate from '../../AccountNavigate';
 import MobileMenu from '../../MobileMenu';
 import { Switch } from 'antd';
+import { ThemeSlice } from '../../../store/reducers/ThemeSlice';
+import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
 
 const Header = () => {
   const [activeBurger, setActiveBurger] = useState(false);
   const [visibleAccount, setVisibleAccount] = useState(false);
+  const { checked } = useAppSelector((state) => state.themeReducer);
+  const { changeTheme } = ThemeSlice.actions;
+  const dispatch = useAppDispatch();
+
   const handlerAccount = () => {
     if (activeBurger) {
       setActiveBurger(false);
@@ -47,7 +53,12 @@ const Header = () => {
           visibleAccount={visibleAccount}
         />
         <MobileMenu activeBurger={activeBurger} />
-        <Switch className={style.theme} checkedChildren="light" unCheckedChildren="dark" />
+        <Switch
+          className={style.theme}
+          checkedChildren="light"
+          unCheckedChildren="dark"
+          onClick={() => dispatch(changeTheme())}
+        />
       </div>
     </header>
   );
