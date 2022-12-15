@@ -1,3 +1,5 @@
+@import '../../../assets/styles/vars.scss';
+
 .layout {
   min-height: 100vh;
   width: 100%;
@@ -8,6 +10,11 @@
     'content'
     'footer';
   grid-template-rows: 72px 1fr 120px;
+}
+
+.dark_theme {
+  background-color: $dark-theme;
+  color: $main-color;
 }
 
 .content {

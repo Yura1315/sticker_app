@@ -30,6 +30,10 @@
   }
 }
 
+.dark_theme {
+  stroke: $main-color;
+}
+
 .hover_menu {
   display: none;
   position: absolute;
@@ -88,6 +92,7 @@
     padding-left: 24px;
     padding-bottom: 47px;
     border-top: 1px solid $light-grey;
+    color: $dark-grey;
     transition: ease-in-out 0.4s;
     &:hover {
       background-color: rgb(247, 247, 247);
@@ -119,6 +124,10 @@
     color: $blue-color;
     opacity: 1;
   }
+}
+
+.lock_dark {
+  color: $main-color;
 }
 
 @media screen and (max-width: 894px) {
@@ -154,15 +163,13 @@
     border-radius: 0;
     transition: ease-in-out 0.4s;
     &_link {
-      border-top: none;
-      border-bottom: 1px solid $light-grey;
+      border-top: 1px solid $light-grey;
     }
     &_link_item {
       margin-left: 0;
     }
     &_logout {
-      border-top: 0;
-      border-bottom: 1px solid $light-grey;
+      border-top: 1px solid $light-grey;
       padding-bottom: 24px;
       &_btn {
         padding-left: 0;

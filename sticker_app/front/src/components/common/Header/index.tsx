@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import FormSearch from '../FormSearch';
-import logo from '../../../assets/img/logo.svg';
+import logoLight from '../../../assets/img/logo.svg';
+import logoDark from '../../../assets/img/logo_dark.svg';
 import style from './Header.module.scss';
 import AccountNavigate from '../../AccountNavigate';
 import MobileMenu from '../../MobileMenu';
@@ -37,10 +38,10 @@ const Header = () => {
     }
   };
   return (
-    <header className={style.header}>
+    <header className={checked ? `${style.header} ${style.dark_theme}` : `${style.header}`}>
       <div className={style.header_wrap}>
         <Link className={style.header_logo} to="/">
-          <img className={style.logo} src={logo} alt="logo" />
+          <img className={style.logo} src={checked ? logoDark : logoLight} alt="logo" />
         </Link>
         <FormSearch />
         <Link className={style.header_link} to="/dashboard-add">

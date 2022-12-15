@@ -51,6 +51,9 @@
     line-height: 24px;
     color: $black;
     margin-top: 24px;
+    &_dark {
+      color: rgb(240, 240, 240);
+    }
   }
   &_link:last-child {
     margin-bottom: 0;

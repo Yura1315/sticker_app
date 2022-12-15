@@ -3,6 +3,7 @@ import React from 'react';
 import HoverMenu from '../HoverMenu';
 import BurgerMenu from '../BurgerMenu';
 import style from './AccountNavigate.module.scss';
+import { useAppSelector } from '../../hooks/redux';
 
 type AccountNavigatePropsType = {
   handler: () => void;
@@ -17,17 +18,22 @@ const AccountNavigate = ({
   handlerAccount,
   visibleAccount,
 }: AccountNavigatePropsType) => {
+  const { checked } = useAppSelector((state) => state.themeReducer);
   return (
     <>
       <div className={style.mobile_user_info}>
-        <LockOutlined className={style.lock_active} onClick={handlerAccount} />
-        {/* <BurgerMenu setActiveBurger={handler} activeBurger={activeBurger} /> */}
+        <LockOutlined
+          className={checked ? `${style.lock_active} ${style.lock_dark}` : `${style.lock_active}`}
+          onClick={handlerAccount}
+        />
         <HoverMenu visibleAccount={visibleAccount} />
       </div>
       <BurgerMenu setActiveBurger={handler} activeBurger={activeBurger} />
       <div className={style.user_info_wrap}>
         <svg
-          className={style.user_info_svg}
+          className={
+            checked ? `${style.user_info_svg} ${style.dark_theme}` : `${style.user_info_svg}`
+          }
           width="24"
           height="24"
           viewBox="0 0 24 24"

@@ -2,13 +2,18 @@
 
 .header {
   grid-area: header;
-  width: 1200px;
+  // width: 1200px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   padding-right: 16px;
   padding-left: 16px;
   &_wrap {
-    width: 100%;
+    // width: 100%;
+    width: 1200px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,6 +47,10 @@
   display: block;
 }
 
+.dark_theme {
+  background-color: $dark-light;
+}
+
 .toggle {
   display: none;
 }
@@ -54,9 +63,11 @@
 
 @media screen and (max-width: 1200px) {
   .header {
-    width: 100%;
-    padding-right: 24px;
-    padding-left: 24px;
+    &_wrap {
+      width: 100%;
+      padding-right: 24px;
+      padding-left: 24px;
+    }
     &_link {
       margin-left: 50px;
     }
