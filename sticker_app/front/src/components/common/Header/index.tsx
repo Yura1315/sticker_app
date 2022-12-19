@@ -13,7 +13,7 @@ import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
 const Header = () => {
   const [activeBurger, setActiveBurger] = useState(false);
   const [visibleAccount, setVisibleAccount] = useState(false);
-  const { checked } = useAppSelector((state) => state.themeReducer);
+  const { checked } = useAppSelector((state) => state.theme);
   const { changeTheme } = ThemeSlice.actions;
   const dispatch = useAppDispatch();
 

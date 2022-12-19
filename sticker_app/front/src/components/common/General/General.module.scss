@@ -1,0 +1,36 @@
+@import '../../../assets/styles/vars.scss';
+
+.wrapper {
+  overflow: hidden;
+  min-height: 504px;
+}
+
+.general {
+  &_left {
+    height: 100%;
+  }
+  &_right {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &_title {
+    font-family: 'Jost-Bold';
+    font-size: 48px !important;
+    margin-top: 168px;
+    margin-bottom: 40px !important;
+  }
+  &_text {
+    font-family: 'Jost-regular';
+    font-size: 16px;
+  }
+  &_img {
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.dark_theme {
+  color: $white-color !important;
+}

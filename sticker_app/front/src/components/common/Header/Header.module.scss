@@ -2,21 +2,17 @@
 
 .header {
   grid-area: header;
-  // width: 1200px;
   width: 100%;
   margin: 0 auto;
   display: flex;
-  padding-right: 16px;
-  padding-left: 16px;
   &_wrap {
-    // width: 100%;
     width: 1200px;
-    padding-right: 16px;
-    padding-left: 16px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 16px;
+    padding-left: 16px;
   }
   &_logo {
     margin-right: 92px;
@@ -65,8 +61,6 @@
   .header {
     &_wrap {
       width: 100%;
-      padding-right: 24px;
-      padding-left: 24px;
     }
     &_link {
       margin-left: 50px;

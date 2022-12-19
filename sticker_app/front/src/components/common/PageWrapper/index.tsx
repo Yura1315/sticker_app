@@ -6,7 +6,7 @@ import style from './PageWrapper.module.scss';
 import { useAppSelector } from '../../../hooks/redux';
 
 const PageWrapper = () => {
-  const { checked } = useAppSelector((state) => state.themeReducer);
+  const { checked } = useAppSelector((state) => state.theme);
   return (
     <div className={checked ? `${style.layout} ${style.dark_theme}` : `${style.layout}`}>
       <Header />

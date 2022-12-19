@@ -18,7 +18,7 @@ const AccountNavigate = ({
   handlerAccount,
   visibleAccount,
 }: AccountNavigatePropsType) => {
-  const { checked } = useAppSelector((state) => state.themeReducer);
+  const { checked } = useAppSelector((state) => state.theme);
   return (
     <>
       <div className={style.mobile_user_info}>

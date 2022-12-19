@@ -4,13 +4,13 @@
   grid-area: footer;
   display: inline-flex;
   align-items: center;
-  padding-right: 16px;
-  padding-left: 16px;
   background-color: $light-grey;
   color: $dark-grey;
   &_wrap {
     width: 1200px;
     margin: 0 auto;
+    padding-right: 16px;
+    padding-left: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,8 +39,6 @@
 
 @media screen and (max-width: 1200px) {
   .footer {
-    padding-right: 24px;
-    padding-left: 24px;
     &_wrap {
       width: 100%;
     }

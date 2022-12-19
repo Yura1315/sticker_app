@@ -8,7 +8,7 @@ type MobileMenuPropsType = {
 };
 
 const MobileMenu = ({ activeBurger }: MobileMenuPropsType) => {
-  const { checked } = useAppSelector((state) => state.themeReducer);
+  const { checked } = useAppSelector((state) => state.theme);
   return (
     <div
       style={checked ? { backgroundColor: 'rgb(26, 30, 35)' } : { backgroundColor: '' }}

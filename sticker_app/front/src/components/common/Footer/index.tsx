@@ -5,7 +5,7 @@ import logoDark from '../../../assets/img/logo_dark.svg';
 import { useAppSelector } from '../../../hooks/redux';
 
 const Footer = () => {
-  const { checked } = useAppSelector((state) => state.themeReducer);
+  const { checked } = useAppSelector((state) => state.theme);
   return (
     <footer className={checked ? `${style.footer} ${style.dark_theme}` : `${style.footer}`}>
       <div className={style.footer_wrap}>

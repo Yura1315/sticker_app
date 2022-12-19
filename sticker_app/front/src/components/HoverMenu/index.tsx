@@ -11,7 +11,7 @@ type HoverMenuPropsType = {
 };
 
 const HoverMenu = ({ visibleAccount }: HoverMenuPropsType) => {
-  const { checked } = useAppSelector((state) => state.themeReducer);
+  const { checked } = useAppSelector((state) => state.theme);
 
   return (
     <div

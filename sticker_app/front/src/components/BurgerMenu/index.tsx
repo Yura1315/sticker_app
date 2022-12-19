@@ -8,7 +8,7 @@ type BurgerMenuPropsType = {
 };
 
 const BurgerMenu = ({ setActiveBurger, activeBurger }: BurgerMenuPropsType) => {
-  const { checked } = useAppSelector((state) => state.themeReducer);
+  const { checked } = useAppSelector((state) => state.theme);
   return (
     <div className={style.hamburger_lines} onClick={setActiveBurger}>
       <span

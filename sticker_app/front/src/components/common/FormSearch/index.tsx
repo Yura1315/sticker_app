@@ -5,7 +5,7 @@ import { useAppSelector } from '../../../hooks/redux';
 
 const FormSearch: React.FC = () => {
   const { Search } = Input;
-  const { checked } = useAppSelector((state) => state.themeReducer);
+  const { checked } = useAppSelector((state) => state.theme);
   const onSearch = (value: string) => console.log(value);
   return (
     <Col className={style.form_wrap} style={{ maxWidth: '565px', flexGrow: 1 }}>
